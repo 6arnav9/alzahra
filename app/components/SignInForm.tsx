@@ -21,6 +21,7 @@ export default function SignInForm() {
         welcomeText?.classList.add("hidden")
         // signInText?.classList.remove("hidden")
         signInForm?.classList.remove("hidden")
+        signInForm?.classList.add("max-sm:flex")
       }
     })
   }
@@ -34,7 +35,7 @@ export default function SignInForm() {
             alt="Al Zahra Logo"
         />
         <h1 className="my-4 text-2xl font-bold text-green-900 text-center px-4" id="welcomeText">Welcome to Al Zahra</h1>
-        <form action="" className="max-sm:flex max-sm:flex-col max-sm:items-center hidden" id="signInForm">
+        <form action="" className="hidden max-sm:flex-col max-sm:items-center" id="signInForm">
             <h1 className="my-4 text-2xl font-bold text-green-900 text-center px-4" id="signInText">Sign In</h1>
             <label htmlFor="user" className="sm:pl-8 sm:pr-1 sm:py-2">Username: </label> 
             <input type="text" name="user" id="user" className="sm:my-2 sm:mr-8 max-sm:mx-4 border-solid border-2 border-gray-400 rounded-sm transition hover:scale-105 focus:scale-105 duration-1000"/> <br />
