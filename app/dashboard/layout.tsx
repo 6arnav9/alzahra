@@ -14,10 +14,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       
       <body className="">
         <div className="grid grid-cols-10 h-screen">
-          <div className="col-span-2 bg-green-800 h-screen grid grid-rows-10">
+          <div className="min-w-fit min-height-full col-span-2 bg-green-800 h-screen grid grid-rows-10">
             <SideNav/>
           </div>
-          <div className="col-span-8">
+          <div className="col-span-8 min-w-fit min-h-full">
             {children}
           </div>
         </div>

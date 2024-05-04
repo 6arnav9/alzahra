@@ -35,7 +35,8 @@ export default function SideNav() {
                 <ul className="flex flex-col text-center gap-6">
                     {navList.map((navItem) => {
                         return(
-                            <li className="px-8 py-4">
+                            <li key={navItem}
+                                className="px-8 py-4">
                                 
                                 <NavButton  
                                     menuName={navItem}
@@ -49,7 +50,9 @@ export default function SideNav() {
                 <ul className="flex flex-col text-center gap-4">
                     {accountOptions.map((accountItem) => {
                         return(
-                            <li className="px-5 py-4">
+                            <li 
+                                key={accountItem}
+                                className="px-5 py-4">
                                 <NavButton  
                                     menuName={accountItem}
                                 />
