@@ -6,7 +6,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../firebase/config";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 
 export default function SignInForm() {
 
@@ -52,10 +52,15 @@ export default function SignInForm() {
     try {
       const res = await signInWithEmailAndPassword(email, password)
       console.log("Signed in")
+      console.log({res})
       setEmail('')
       setPassword('')
       router.push('/dashboard')
-
+    //   if (typeof window !== 'undefined') {
+    //     // Safe to use sessionStorage
+    //     sessionStorage.setItem('user', 'true')
+    // }
+    
     } catch (error) {
       console.log(error)
     }

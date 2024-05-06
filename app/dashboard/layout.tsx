@@ -1,3 +1,5 @@
+
+
 import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
 import SideNav from "../components/Sidenav";
@@ -13,11 +15,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en">
       
       <body className="">
-        <div className="grid grid-cols-10 h-screen">
-          <div className="min-w-fit min-height-full col-span-2 bg-green-800 h-screen grid grid-rows-10">
-            <SideNav/>
-          </div>
-          <div className="col-span-8 min-w-fit min-h-full">
+        <div className="md:grid md:grid-cols-10 h-screen max-md:block">
+          <SideNav/>
+          <div className="md:col-span-8 min-w-fit min-h-full">
             {children}
           </div>
         </div>
